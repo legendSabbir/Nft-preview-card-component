@@ -1,0 +1,119 @@
+@Soft_blue: hsl(215, 51%, 70%);
+@Cyan: hsl(178, 100%, 50%);
+@Very_dark_blue_main: hsl(217, 54%, 11%);
+@Very_dark_blue_card: hsl(216, 50%, 16%);
+@Very_dark_blue_line: hsl(215, 32%, 27%);
+@White: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @Very_dark_blue_main;
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 400px;
+  margin-inline: 10px;
+  padding: 25px;
+  background-color: @Very_dark_blue_card;
+  border-radius: 16px;
+}
+
+figure {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.title {
+  margin-block: 20px 15px;
+  color: @White;
+  font-size: 1.6rem;
+}
+
+.text {
+  font-size: 18px;
+  color: @Soft_blue;
+  // margin-block: 5px;
+  font-weight: 300;
+}
+
+.price_time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 6px;
+  padding-block: 15px;
+  border-block-end: 1px solid @Very_dark_blue_line;
+}
+
+.price {
+  font-weight: 600;
+  color: @Cyan;
+}
+
+.time {
+  color: @Soft_blue;
+}
+
+.price, .time {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.profile {
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  
+  .logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid @White;
+    
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .name {
+    color: @Soft_blue;
+    font-weight: 300;
+    
+    span {
+      color: @White;
+      font-weight: 400;
+    }
+  }
+}
+
